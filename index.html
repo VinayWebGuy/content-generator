@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay - Dynamic Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">Content Generator <small>by Vinay Munjal</small></div>
+    <div class="container">
+        <div class="user-inputs">
+            <h2>Generate Dynamic Content</h2>
+            <form id="form">
+                <div class="row">
+                    <div class="group full">
+                        <label for="elem">Element</label>
+                        <select name="elem" id="elem">
+                            <option value="">Select an option</option>
+                            <option value="p">p</option>
+                            <option value="br">br</option>
+                            <option value="hr">hr</option>
+                            <option value="h1">h1</option>
+                            <option value="h2">h2</option>
+                            <option value="h3">h3</option>
+                            <option value="h4">h4</option>
+                            <option value="h5">h5</option>
+                            <option value="h6">h6</option>
+                            <option value="img">img</option>
+                            <option value="a">a</option>
+                            <option value="span">span</option>
+                            <option value="b">b</option>
+                            <option value="em">em</option>
+                            <option value="mark">mark</option>
+                            <option value="i">i</option>
+                            <option value="div">div</option>
+                            <option value="section">section</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row _addon">
+                    <div class="group half">
+                        <label for="cls">Class</label>
+                        <input type="text" id="cls">
+                    </div>
+                    <div class="group half">
+                        <label for="iid">ID</label>
+                        <input type="text" id="iid">
+                    </div>
+                </div>
+                <div class="row hidden addon" id="size">
+                    <div class="group half">
+                        <label for="height">Height</label>
+                        <input type="number" id="height">
+                        <select name="" id="height-size" class="size-type">
+                            <option value="px">px</option>
+                            <option disabled value="percent">percent</option>
+                            <option disabled value="em">em</option>
+                            <option disabled value="rem">rem</option>
+                        </select>
+                    </div>
+                    <div class="group half">
+                        <label for="width">Width</label>
+                        <input type="number" id="width">
+                        <select name="" id="width-size" class="size-type">
+                            <option value="px">px</option>
+                            <option disabled value="percent">percent</option>
+                            <option disabled value="em">em</option>
+                            <option disabled value="rem">rem</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row hidden addon" id="link">
+                    <div class="group full">
+                        <label for="a_link">Link</label>
+                        <input type="text" id="a_link">
+                    </div>
+                    <!-- <div class="group half">
+                        <label for="target">Target</label>
+                        <select id="target" class="">
+                            <option value="">same</option>
+                            <option value="_blank">another</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div class="row hidden addon" id="inner-content">
+                   <div class="group full">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" cols="30" rows="2"></textarea>
+                   </div>
+                </div>
+                
+                <button id="add">Add</button>
+            </form>
+        </div>
+        <div class="user-output">
+
+                <h2>Output<div class="buttons">
+
+                    <button id="add-css">CSS</button><button id="clear">Clear</button></div></h2>
+            
+            <div id="results" class="">
+
+            </div>
+
+            <!-- <div id="css">
+            </div> -->
+        </div>
+    </div>
+    <div class="container hidden" id="css-container">
+        <div class="css-data">
+            <button id="save-css">Save</button>
+          
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

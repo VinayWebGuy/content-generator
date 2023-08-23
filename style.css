@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    position: relative;
+    min-height: 100vh;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.logo{
+    padding: 15px 0;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: 'Poppins';
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: blueviolet;
+    margin-bottom: 30px;
+}
+.logo small{
+    font-size: 0.8rem;
+}
+.container{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.user-inputs, .user-output{
+    width: 48%;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    font-family: 'Poppins';
+}
+.user-inputs h2, .user-output h2{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.row.hidden{
+    display: none;
+}
+.full{
+    width: 100%;
+}
+.half{
+    width: 45%;
+}
+.group label{
+    margin-bottom: 7px;
+}
+.group select, .group input, .group textarea {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    font-family: Poppins;
+}
+.size-type{
+    padding: 1px !important;
+    font-size: 0.8rem !important;
+    /* text-align: center; */
+    opacity: 0.7;
+    border: none;
+}
+button{
+    background-color: brown;
+    color: #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.user-output h2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.user-output{
+    height: 400px;
+    overflow-y: auto;
+    position: relative;
+}
+#results{
+    overflow: hidden;
+    word-break: break-all;
+}
+button#add-css{
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    /* font-size: 0.8rem;
+    padding: 3px 6px; */
+    margin-right: 6px;
+    background-color: blueviolet;
+}
+
+#css-container{
+    position: relative;
+    margin-bottom: 50px;
+}
+#css-container.hidden{
+    display: none;
+}
+#save-css{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.single-class{
+    margin-bottom: 20px;
+}
+.css-data{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 30px;
+    font-family: consolas !important;
+}
+.selected-class-properties{
+    padding: 0 25px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #eee;
+    position: relative;
+}
+.selected-class-properties::before{
+    content: '➡';
+    position: absolute;
+    /* width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff; */
+    opacity: 0.7;
+    left: 0;
+    top: 0;
+}
+#results.css-active .result-element:hover{
+0    border: 1px solid #aaa;
+}
+.css-hover-border{
+    border: 1px solid #aaa;
+}
+
+#cls, #iid, .selected-class-properties, .selected-class{
+    text-transform: lowercase;
+}
+
+@media (max-width: 800px) {
+    .logo{
+        font-size: 1.4rem;
+    }
+    .logo small{
+        font-size: 0.7rem;
+    }
+    .container{
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+    .user-inputs, .user-output{
+        width: 100%;
+    }
+    .user-output{
+        margin-top: 30px;
+    }
+    .user-inputs h2, .user-output h2{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 600px) {
+    .logo{
+        font-size: 1.1rem;
+    }
+    .logo small{
+        font-size: 0.5rem;
+    }
+    .container{
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+    .user-inputs, .user-output{
+        width: 100%;
+    }
+    .user-output{
+        margin-top: 30px;
+    }
+    .user-inputs h2, .user-output h2{
+        font-size: 1.2rem;
+    }
+}
